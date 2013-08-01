@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  JBoss, Home of Professional Open Source
+  Copyright Red Hat, Inc., and individual contributors
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<html lang="en" ng-app="kitchensink">
+	<head>
+	    <title>kitchensink</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	    
+	    <!-- Load Topcoat styles -->
+	    <link rel="stylesheet" href="css/libs/topcoat/css/topcoat-mobile-dark.css" type="text/css" />
+	    
+	    <!-- Load Custom App CSS styles -->
+	    <link rel="stylesheet" href="css/app/m.screen.css" type="text/css" />
+	    
+	    <!-- Load the globalize lib -->
+	    <script src="js/libs/globalize/globalize.js"></script>
+	    
+	    <!-- Load the globalize lib -->
+	    <script src="js/libs/globalize/globalize.culture.fr.js"></script>
+	    
+	    <!-- Load angularjs -->
+	    <script src="js/libs/angularjs/angular.js"></script>
+	    
+	    <!-- Load angularjs-resource, which allows us to interact with REST resources as high level services -->
+	    <script src="js/libs/angularjs/angular-resource.js"></script>
+	    
+	    <!-- Load the app js -->
+	    <script src="js/app/app.js"></script>
+	    
+	    <!-- Load the services we have defined for the application, particularly the REST services -->
+	    <script src="js/app/services.js"></script>
+	    
+	    <!-- Load the controllers for our app -->
+	    <script src="js/app/controllers.js"></script>
+	    
+	</head>
+	<body ng-view>
+			
+	</body>
+</html>
