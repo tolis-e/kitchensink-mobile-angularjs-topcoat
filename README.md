@@ -1,10 +1,10 @@
-kitchensink-angularjs-topcoat-internationalization
+kitchensink-mobile-angularjs-topcoat
 ========================
 
 What is it?
 -----------
 
-Shows how to use HTML5, AngularJS, Topcoat, jQuery Globalize, JAX-RS and Java EE on JBoss.
+Shows how to combine HTML5, AngularJS, Topcoat, jQuery Globalize, JAX-RS and Java EE in order to create an internationalized mobile web application.
 
 This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with AngularJS on Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
 
