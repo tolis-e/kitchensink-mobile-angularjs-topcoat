@@ -1,8 +1,10 @@
-kitchensink-angularjs-topcoat-internationalization: Shows how to use HTML5, AngularJS, Topcoat, jQuery Globalize, JAX-RS and Java EE on JBoss
+kitchensink-angularjs-topcoat-internationalization
 ========================
 
 What is it?
 -----------
+
+Shows how to use HTML5, AngularJS, Topcoat, jQuery Globalize, JAX-RS and Java EE on JBoss.
 
 This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with AngularJS on Java EE 6 on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
 
@@ -102,7 +104,7 @@ Note that we use the `jboss-as-quickstart@jboss.org` user for these examples. Yo
 
 Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss AS 7:
 
-    rhc app create -a kitchensinkangularjs -t APPLICATION_TYPE
+    rhc app create -a kitchensinkangularjstopcoat -t APPLICATION_TYPE
 
 _NOTE_: The domain name for this application will be `kitchensinkangularjstopcoat-YOUR_DOMAIN_NAME.rhcloud.com`. Here we use the _quickstart_ domain. You will need to replace it with your own OpenShift domain name.
 
@@ -114,14 +116,14 @@ This command creates an OpenShift application called `kitchensinkangularjstopcoa
     Confirming application 'kitchensinkangularjstopcoat' is available:  Success!
 
     kitchensinkangularjstopcoat published:  http://kitchensinkangularjstopcoat-quickstart.rhcloud.com/
-    git url:  ssh://76f095330e3f49af97a52e513a9c966b@kitchensinkangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkangularjs.git/
+    git url:  ssh://76f095330e3f49af97a52e513a9c966b@kitchensinkangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkangularjstopcoat.git/
     Successfully created application: kitchensinkangularjstopcoat
 
 ### Migrate the Quickstart Source
 
 Now that you have confirmed it is working you can migrate the quickstart source. You do not need the generated default application, so navigate to the new git repository directory and tell git to remove the source and pom files:
 
-        cd kitchensinkangularjs
+        cd kitchensinkangularjstopcoat
         git rm -r src pom.xml
 
 Copy the source for the wsat-simple quickstart into this new git repo:
@@ -148,13 +150,13 @@ OpenShift will build the application using Maven, and deploy it to JBoss AS 7. I
     remote: [INFO] Final Memory: 8M/168M
     remote: [INFO] ------------------------------------------------------------------------
     remote: Running .openshift/action_hooks/build
-    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjs/jbossas-7/standalone/tmp/vfs
-    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjs/jbossas-7/standalone/tmp/work
+    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjstopcoat/jbossas-7/standalone/tmp/vfs
+    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjstopcoat/jbossas-7/standalone/tmp/work
     remote: Running .openshift/action_hooks/deploy
     remote: Starting application...
     remote: Done
     remote: Running .openshift/action_hooks/post_deploy
-    To ssh://1e63c17c2dd94a329f21555a33dc617d@kitchensinkangularjs-quickstart.rhcloud.com/~/git/kitchensinkangularjs.git/
+    To ssh://1e63c17c2dd94a329f21555a33dc617d@kitchensinkangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkangularjstopcoat.git/
        e6f80bd..63504b9  master -> master
 
 Note that the `openshift` profile in the `pom.xml` file is activated by OpenShift. This causes the WAR built by OpenShift to be copied to the `deployments` directory and deployed without a context path.
