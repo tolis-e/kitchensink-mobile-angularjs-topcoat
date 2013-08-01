@@ -104,26 +104,26 @@ Note that we use the `jboss-as-quickstart@jboss.org` user for these examples. Yo
 
 Open a shell command prompt and change to a directory of your choice. Enter the following command, replacing APPLICATION_TYPE with `jbosseap-6.0` for quickstarts running on JBoss Enterprise Application Platform 6, or `jbossas-7` for quickstarts running on JBoss AS 7:
 
-    rhc app create -a kitchensinkangularjstopcoat -t APPLICATION_TYPE
+    rhc app create -a kitchensinkmobileangularjstopcoat -t APPLICATION_TYPE
 
-_NOTE_: The domain name for this application will be `kitchensinkangularjstopcoat-YOUR_DOMAIN_NAME.rhcloud.com`. Here we use the _quickstart_ domain. You will need to replace it with your own OpenShift domain name.
+_NOTE_: The domain name for this application will be `kitchensinkmobileangularjstopcoat-YOUR_DOMAIN_NAME.rhcloud.com`. Here we use the _quickstart_ domain. You will need to replace it with your own OpenShift domain name.
 
-This command creates an OpenShift application called `kitchensinkangularjstopcoat` and will run the application inside the `jbosseap-6.0`  or `jbossas-7` container. You should see some output similar to the following:
+This command creates an OpenShift application called `kitchensinkmobileangularjstopcoat` and will run the application inside the `jbosseap-6.0`  or `jbossas-7` container. You should see some output similar to the following:
 
-    Creating application: kitchensinkangularjstopcoat
+    Creating application: kitchensinkmobileangularjstopcoat
     Now your new domain name is being propagated worldwide (this might take a minute)...
     Warning: Permanently added the RSA host key for IP address '23.20.102.147' to the list of known hosts.
-    Confirming application 'kitchensinkangularjstopcoat' is available:  Success!
+    Confirming application 'kitchensinkmobileangularjstopcoat' is available:  Success!
 
-    kitchensinkangularjstopcoat published:  http://kitchensinkangularjstopcoat-quickstart.rhcloud.com/
-    git url:  ssh://76f095330e3f49af97a52e513a9c966b@kitchensinkangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkangularjstopcoat.git/
-    Successfully created application: kitchensinkangularjstopcoat
+    kitchensinkmobileangularjstopcoat published:  http://kitchensinkmobileangularjstopcoat-quickstart.rhcloud.com/
+    git url:  ssh://76f095330e3f49af97a52e513a9c966b@kitchensinkmobileangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkmobileangularjstopcoat.git/
+    Successfully created application: kitchensinkmobileangularjstopcoat
 
 ### Migrate the Quickstart Source
 
 Now that you have confirmed it is working you can migrate the quickstart source. You do not need the generated default application, so navigate to the new git repository directory and tell git to remove the source and pom files:
 
-        cd kitchensinkangularjstopcoat
+        cd kitchensinkmobileangularjstopcoat
         git rm -r src pom.xml
 
 Copy the source for the wsat-simple quickstart into this new git repo:
@@ -150,13 +150,13 @@ OpenShift will build the application using Maven, and deploy it to JBoss AS 7. I
     remote: [INFO] Final Memory: 8M/168M
     remote: [INFO] ------------------------------------------------------------------------
     remote: Running .openshift/action_hooks/build
-    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjstopcoat/jbossas-7/standalone/tmp/vfs
-    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkangularjstopcoat/jbossas-7/standalone/tmp/work
+    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkmobileangularjstopcoat/jbossas-7/standalone/tmp/vfs
+    remote: Emptying tmp dir: /var/lib/libra/1e63c17c2dd94a329f21555a33dc617d/kitchensinkmobileangularjstopcoat/jbossas-7/standalone/tmp/work
     remote: Running .openshift/action_hooks/deploy
     remote: Starting application...
     remote: Done
     remote: Running .openshift/action_hooks/post_deploy
-    To ssh://1e63c17c2dd94a329f21555a33dc617d@kitchensinkangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkangularjstopcoat.git/
+    To ssh://1e63c17c2dd94a329f21555a33dc617d@kitchensinkmobileangularjstopcoat-quickstart.rhcloud.com/~/git/kitchensinkmobileangularjstopcoat.git/
        e6f80bd..63504b9  master -> master
 
 Note that the `openshift` profile in the `pom.xml` file is activated by OpenShift. This causes the WAR built by OpenShift to be copied to the `deployments` directory and deployed without a context path.
@@ -165,11 +165,11 @@ Note that the `openshift` profile in the `pom.xml` file is activated by OpenShif
 
 Now you will start to tail the log files of the server. To do this run the following command, remembering to replace the application name and login id.
 
-        rhc tail -a kitchensinkangularjstopcoat
+        rhc tail -a kitchensinkmobileangularjstopcoat
 
 Once the app is deployed, you can test the application by accessing the following URL either via a browser or using tools such as curl or wget. Be sure to replace the `quickstart` in the URL with your domain name.
 
-    http://kitchensinkangularjstopcoat-quickstart.rhcloud.com/
+    http://kitchensinkmobileangularjstopcoat-quickstart.rhcloud.com/
 
 You should now be able to interact with the application in a similar mannor as when you deployed it locally.
 
@@ -179,7 +179,7 @@ You can use the OpenShift command line tools or the OpenShift web console to dis
 
 When you are finished with the application you can destroy it as follows:
 
-        rhc app destroy -a kitchensinkangularjstopcoat
+        rhc app destroy -a kitchensinkmobileangularjstopcoat
 
 To view the list of your current OpenShift applications, type:
 
