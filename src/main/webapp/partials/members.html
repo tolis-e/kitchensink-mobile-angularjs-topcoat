@@ -15,64 +15,64 @@
   limitations under the License.
 -->
 <section id="container" ng-controller="MainCtrl">
-	<aside id="side-bar">
-		<div class="topcoat-list__container">
-		    <h3 class="topcoat-list__header">{{messages.language}}</h3>
-		    <ul class="topcoat-list topcoat-list-clickable">
-		        <li class="topcoat-list__item" ng-repeat="settingListOption in settingListOptions" ng-click="changeCulture(settingListOption.code)">
-		            {{settingListOption.text}}
-		        </li>
-		    </ul>
-		</div>
-	</aside>
-	<article id="page-content" ng-class="{'slide' : sidebarIsVisible == true}">
-		<div class="topcoat-navigation-bar header">
-		    <div class="topcoat-navigation-bar__item left quarter">
-				<a class="topcoat-icon-button--quiet" ng-click="showSideBar()">
-		            <span class="topcoat-icon topcoat-icon--settings"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center half">
-		        <h1 class="topcoat-navigation-bar__title">{{messages.home_msg_0}}</h1>
-		    </div>
-		    <div class="topcoat-navigation-bar__item right quarter"></div>
-		</div>
-		<div class="main" ng-controller="MembersCtrl">
-		    <div class="topcoat-list__container">
-			    <ul class="topcoat-list">
-			        <li class="topcoat-list__item" ng-repeat="member in members | orderBy:orderBy">
-			            <div class="topcoat-member-container">
-			            	<p>{{member.name}}</p>
-			            	<span class="topcoat-icon topcoat-icon--user"></span>
-			            </div>
-			            <div class="topcoat-member-container">
-			            	<p>{{member.email}}</p>
-			            	<span class="topcoat-icon topcoat-icon--email"></span>
-			            </div>
-			            <div class="topcoat-member-container">
-			            	<p>{{member.phoneNumber}}</p>
-			        		<span class="topcoat-icon topcoat-icon--call"></span>
-			        	</div>
-			        </li>
-			    </ul>
-			</div>
-		</div>
-		<div class="topcoat-navigation-bar footer">
-		    <div class="topcoat-navigation-bar__item center quarter">
-		        <a href="#/home" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--home"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center half">
-		        <a href="#/member" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--plus"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center quarter">
-		        <a href="#/members" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-		        </a>
-		    </div>
-		</div>
-	</article>
+    <aside id="side-bar">
+        <div class="topcoat-list__container">
+            <h3 class="topcoat-list__header">{{messages.language}}</h3>
+            <ul class="topcoat-list topcoat-list-clickable">
+                <li class="topcoat-list__item" ng-repeat="settingListOption in settingListOptions" ng-click="changeCulture(settingListOption.code)">
+                    {{settingListOption.text}}
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <article id="page-content" ng-class="{'slide' : sidebarIsVisible == true}">
+        <div class="topcoat-navigation-bar header">
+            <div class="topcoat-navigation-bar__item left quarter">
+                <a class="topcoat-icon-button--quiet" ng-click="showSideBar()">
+                    <span class="topcoat-icon topcoat-icon--settings"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <h1 class="topcoat-navigation-bar__title">{{messages.home_msg_0}}</h1>
+            </div>
+            <div class="topcoat-navigation-bar__item right quarter"></div>
+        </div>
+        <div class="main" ng-controller="MembersCtrl">
+            <div class="topcoat-list__container">
+                <ul class="topcoat-list">
+                    <li class="topcoat-list__item" ng-repeat="member in members | orderBy:orderBy">
+                        <div class="topcoat-member-container">
+                            <p>{{member.name}}</p>
+                            <span class="topcoat-icon topcoat-icon--user"></span>
+                        </div>
+                        <div class="topcoat-member-container">
+                            <p>{{member.email}}</p>
+                            <span class="topcoat-icon topcoat-icon--email"></span>
+                        </div>
+                        <div class="topcoat-member-container">
+                            <p>{{member.phoneNumber}}</p>
+                            <span class="topcoat-icon topcoat-icon--call"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="topcoat-navigation-bar footer">
+            <div class="topcoat-navigation-bar__item center quarter">
+                <a href="#/home" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--home"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <a href="#/member" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--plus"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center quarter">
+                <a href="#/members" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+                </a>
+            </div>
+        </div>
+    </article>
 </section>

@@ -15,80 +15,80 @@
   limitations under the License.
 -->
 <section id="container" ng-controller="MainCtrl">
-	<aside id="side-bar">
-		<div class="topcoat-list__container">
-		    <h3 class="topcoat-list__header">{{messages.language}}</h3>
-		    <ul class="topcoat-list topcoat-list-clickable">
-		        <li class="topcoat-list__item" ng-repeat="settingListOption in settingListOptions" ng-click="changeCulture(settingListOption.code)">
-		            {{settingListOption.text}}
-		        </li>
-		    </ul>
-		</div>
-	</aside>
-	<article id="page-content" ng-class="{'slide' : sidebarIsVisible == true}">
-		<div class="topcoat-navigation-bar header">
-		    <div class="topcoat-navigation-bar__item left quarter">
-				<a class="topcoat-icon-button--quiet" ng-click="showSideBar()">
-		            <span class="topcoat-icon topcoat-icon--settings"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center half">
-		        <h1 class="topcoat-navigation-bar__title">{{messages.home_msg_0}}</h1>
-		    </div>
-		    <div class="topcoat-navigation-bar__item right quarter"></div>
-		</div>
-		<div class="main">
-		    <form id="reg" class="member-form" ng-submit="register()">
-		        <fieldset>
-		            <legend>{{messages.member_register}}:</legend>
-		            <!-- Each input is bound to a property on the prototype newMember object -->
-		            <div class="form-error" ng-show="errors.name">{{errors.name}}</div>
-		            <div>
-		                <input type="text" class="topcoat-text-input" name="name" id="name" ng-model="newMember.name" placeholder="{{messages.name}}" required autofocus/>
-		            </div>
-		            <div class="form-error" ng-show="errors.email">{{errors.email}}</div>
-		            <div>
-		                <input type="text" class="topcoat-text-input" name="email" id="email" ng-model="newMember.email" placeholder="{{messages.email}}" required/>
-		            </div>
-		            <div class="form-error" ng-show="errors.phoneNumber">{{errors.phoneNumber}}</div>
-		            <div>
-		                <input type="tel" class="topcoat-text-input" name="phoneNumber" id="phoneNumber" ng-model="newMember.phoneNumber" pattern="[0-9]{10,12}" placeholder="{{messages.phone}} #" required/>
-		            </div>
-		            
-		            <!-- We output a list of success messages (appropriately styled!) for the form. -->
-		            <div ng-show="successMessages" class="form-success">
-		                <p ng-repeat="message in successMessages">{{message}}</p>
-		            </div>
-		
-		            <!-- Output the list of error messages if any. -->
-		            <div ng-show="errorMessages" class="form-error">
-		                <p ng-repeat="message in errorMessages">{{message}}</p>
-		            </div>
-		
-		            <!-- There are two buttons, the default submit action (which is bound for the whole form), and a reset button, that clears the form. -->
-		            <div class="display-inline">
-		            	<a href="" class="topcoat-button--cta" ng-click="register()">{{messages.register}}</a>
-		            	<a href="" class="topcoat-button--cta" ng-click="reset()">{{messages.cancel}}</a>
-		            </div>
-		        </fieldset>
-		    </form>
-		</div>
-		<div class="topcoat-navigation-bar footer">
-		    <div class="topcoat-navigation-bar__item center quarter">
-		        <a href="#/home" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--home"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center half">
-		        <a href="#/member" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--plus"></span>
-		        </a>
-		    </div>
-		    <div class="topcoat-navigation-bar__item center quarter">
-		        <a href="#/members" class="topcoat-icon-button--quiet">
-		            <span class="topcoat-icon topcoat-icon--menu-stack"></span>
-		        </a>
-		    </div>
-		</div>
-	</article>
+    <aside id="side-bar">
+        <div class="topcoat-list__container">
+            <h3 class="topcoat-list__header">{{messages.language}}</h3>
+            <ul class="topcoat-list topcoat-list-clickable">
+                <li class="topcoat-list__item" ng-repeat="settingListOption in settingListOptions" ng-click="changeCulture(settingListOption.code)">
+                    {{settingListOption.text}}
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <article id="page-content" ng-class="{'slide' : sidebarIsVisible == true}">
+    <div class="topcoat-navigation-bar header">
+        <div class="topcoat-navigation-bar__item left quarter">
+                <a class="topcoat-icon-button--quiet" ng-click="showSideBar()">
+                    <span class="topcoat-icon topcoat-icon--settings"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <h1 class="topcoat-navigation-bar__title">{{messages.home_msg_0}}</h1>
+            </div>
+            <div class="topcoat-navigation-bar__item right quarter"></div>
+        </div>
+        <div class="main">
+            <form id="reg" class="member-form" ng-submit="register()">
+                <fieldset>
+                    <legend>{{messages.member_register}}:</legend>
+                    <!-- Each input is bound to a property on the prototype newMember object -->
+                    <div class="form-error" ng-show="errors.name">{{errors.name}}</div>
+                    <div>
+                        <input type="text" class="topcoat-text-input" name="name" id="name" ng-model="newMember.name" placeholder="{{messages.name}}" required autofocus/>
+                    </div>
+                    <div class="form-error" ng-show="errors.email">{{errors.email}}</div>
+                    <div>
+                        <input type="text" class="topcoat-text-input" name="email" id="email" ng-model="newMember.email" placeholder="{{messages.email}}" required/>
+                    </div>
+                    <div class="form-error" ng-show="errors.phoneNumber">{{errors.phoneNumber}}</div>
+                    <div>
+                        <input type="tel" class="topcoat-text-input" name="phoneNumber" id="phoneNumber" ng-model="newMember.phoneNumber" pattern="[0-9]{10,12}" placeholder="{{messages.phone}} #" required/>
+                    </div>
+                    
+                    <!-- We output a list of success messages (appropriately styled!) for the form. -->
+                    <div ng-show="successMessages" class="form-success">
+                        <p ng-repeat="message in successMessages">{{message}}</p>
+                    </div>
+    
+                    <!-- Output the list of error messages if any. -->
+                    <div ng-show="errorMessages" class="form-error">
+                        <p ng-repeat="message in errorMessages">{{message}}</p>
+                    </div>
+        
+                    <!-- There are two buttons, the default submit action (which is bound for the whole form), and a reset button, that clears the form. -->
+                    <div class="display-inline">
+                        <a href="" class="topcoat-button--cta" ng-click="register()">{{messages.register}}</a>
+                        <a href="" class="topcoat-button--cta" ng-click="reset()">{{messages.cancel}}</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="topcoat-navigation-bar footer">
+            <div class="topcoat-navigation-bar__item center quarter">
+                <a href="#/home" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--home"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <a href="#/member" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--plus"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center quarter">
+                <a href="#/members" class="topcoat-icon-button--quiet">
+                    <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+                </a>
+            </div>
+        </div>
+    </article>
 </section>
