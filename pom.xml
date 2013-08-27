@@ -41,16 +41,11 @@
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         <version.jboss.bom>1.0.7.CR8</version.jboss.bom>
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
-        <version.surefire.plugin>2.12</version.surefire.plugin>
+        <version.surefire.plugin>2.16</version.surefire.plugin>
         <version.war.plugin>2.1.1</version.war.plugin>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <version.org.jboss.arquillian.qunit>1.0.0.Alpha1-SNAPSHOT</version.org.jboss.arquillian.qunit>
-        <version.org.jboss.arquillian.graphene>2.0.0.Alpha4</version.org.jboss.arquillian.graphene>
-        <version.org.jboss.arquillian>1.0.4.Final</version.org.jboss.arquillian>
-        <version.selenium>2.33.0</version.selenium>
-        <version.junit>4.8</version.junit>
-        <version.org.jboss.spec>3.0.2.Final</version.org.jboss.spec>
     </properties>
 
     <build>
