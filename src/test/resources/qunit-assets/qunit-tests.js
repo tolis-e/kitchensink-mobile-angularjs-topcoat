@@ -65,8 +65,7 @@ test('setCulture', function() {
 	strictEqual("fr", Globalize.culture().name);
 });
 
-// notice the init call which is used to setup/initialize the scope and cultures
-// service
+// notice the lifecycle callbacks which perform setup/initializion
 module('Controllers:', init);
 
 /*
