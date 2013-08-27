@@ -42,8 +42,7 @@ function MainCtrl($scope, Cultures, $http, Members) {
 		Cultures.setCulture(code);
 		// refresh
 		$scope.refresh();
-		console.log("## HomeCtrl: new culture is: '" + Globalize.culture().name + "'");
-    };
+	};
     
     // Define a reset function
     $scope.reset = function() {
