@@ -49,7 +49,7 @@
         <version.org.jboss.arquillian.graphene>2.0.0.Alpha4</version.org.jboss.arquillian.graphene>
         <version.org.jboss.arquillian>1.0.4.Final</version.org.jboss.arquillian>
         <version.selenium>2.33.0</version.selenium>
-        <version.junit>4.11</version.junit>
+        <version.junit>4.8</version.junit>
         <version.org.jboss.spec>3.0.2.Final</version.org.jboss.spec>
     </properties>
 
@@ -88,35 +88,6 @@
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.arquillian.selenium</groupId>
-                <artifactId>selenium-bom</artifactId>
-                <version>${version.selenium}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.arquillian.graphene</groupId>
-                <artifactId>graphene-webdriver</artifactId>
-                <version>${version.org.jboss.arquillian.graphene}</version>
-                <type>pom</type>
-            </dependency>
-
-            <dependency>
-                <groupId>org.jboss.arquillian</groupId>
-                <artifactId>arquillian-bom</artifactId>
-                <version>${version.org.jboss.arquillian}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${version.junit}</version>
             </dependency>
 
         </dependencies>
@@ -175,29 +146,6 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-annotation-processor</artifactId>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.arquillian.graphene</groupId>
-            <artifactId>graphene-webdriver</artifactId>
-            <type>pom</type>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.arquillian</groupId>
-            <artifactId>arquillian-bom</artifactId>
-            <version>${version.org.jboss.arquillian}</version>
-            <type>pom</type>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.arquillian.junit</groupId>
-            <artifactId>arquillian-junit-container</artifactId>
         </dependency>
 
         <dependency>
