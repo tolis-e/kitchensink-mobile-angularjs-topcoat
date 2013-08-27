@@ -72,7 +72,6 @@ module('Controllers:', init);
 /*
  * Tests the MainCtrl controller
  */
-
 test('MainCtrl', function() {
 	expect(10);
 	var $controller = injector.get('$controller');
@@ -103,7 +102,7 @@ test('MainCtrl', function() {
 		"email" : "john.smith@example.com",
 		"phoneNumber" : "000000000000"
 	};
-	notEqual(this.$scope.newMember, {}, "New Member is not empty");
+	ok(!$.isEmptyObject(this.$scope.newMember), "New Member is not empty");
 	this.$scope.refresh();
 	ok($.isEmptyObject(this.$scope.newMember),
 			"New Member empty after refresh");
