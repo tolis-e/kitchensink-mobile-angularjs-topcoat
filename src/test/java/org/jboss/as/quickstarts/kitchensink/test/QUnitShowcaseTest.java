@@ -16,7 +16,6 @@
  */
 package org.jboss.as.quickstarts.kitchensink.test;
 
-import org.jboss.arquillian.junit.InSequence;
 import org.jboss.arquillian.qunit.junit.QUnitRunner;
 import org.jboss.arquillian.qunit.junit.annotations.QUnitResources;
 import org.jboss.arquillian.qunit.junit.annotations.QUnitTest;
@@ -27,7 +26,6 @@ import org.junit.runner.RunWith;
 public class QUnitShowcaseTest {
 
     @QUnitTest("test/resources/qunit-assets/qunit-tests.html")
-    @InSequence(1)
     public void qunitTests() {
         // empty body - only the annotations are used
     }
