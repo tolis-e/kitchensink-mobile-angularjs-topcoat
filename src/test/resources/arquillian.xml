@@ -20,7 +20,7 @@
         http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
 
     <extension qualifier="webdriver">
-        <property name="browserCapabilities">firefox</property>
+        <property name="browser">firefox</property>
     </extension>
 
 </arquillian>

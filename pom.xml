@@ -45,7 +45,10 @@
         <version.war.plugin>2.1.1</version.war.plugin>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
-        <version.org.jboss.arquillian.qunit>1.0.0.Alpha1-SNAPSHOT</version.org.jboss.arquillian.qunit>
+        <version.org.jboss.arquillian.graphene>2.0.0.CR1</version.org.jboss.arquillian.graphene>
+        <version.org.jboss.arquillian>1.1.1.Final</version.org.jboss.arquillian>
+        <version.org.jboss.arquillian.drone>1.2.0.Final</version.org.jboss.arquillian.drone>
+        <version.org.jboss.arquillian.qunit>1.0.0.Alpha2</version.org.jboss.arquillian.qunit>
         <version.junit>4.11</version.junit>
     </properties>
 
@@ -84,6 +87,24 @@
                 <version>${version.jboss.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            
+            <!-- Arquillian BOM (Bill Of Materials). -->
+            <dependency>
+                <groupId>org.jboss.arquillian.extension</groupId>
+                <artifactId>arquillian-drone-bom</artifactId>
+                <version>${version.org.jboss.arquillian.drone}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!-- Arquillian BOM (Bill Of Materials). -->
+            <dependency>
+                <groupId>org.jboss.arquillian</groupId>
+                <artifactId>arquillian-bom</artifactId>
+                <version>${version.org.jboss.arquillian}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
 
         </dependencies>
@@ -154,6 +175,12 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-standalone</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
