@@ -169,6 +169,7 @@
             <groupId>org.jboss.arquillian.extension</groupId>
             <artifactId>arquillian-qunit</artifactId>
             <version>${version.org.jboss.arquillian.qunit}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
