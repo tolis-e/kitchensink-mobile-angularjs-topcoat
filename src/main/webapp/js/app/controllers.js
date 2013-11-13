@@ -15,34 +15,34 @@
  * limitations under the License.
  */
 function MainCtrl($scope, Cultures, $http, Members) { 
-	
-	// handle side bar visibility
-	$scope.sidebarIsVisible = false;
-	$scope.showSideBar = function() {
-		$scope.sidebarIsVisible = !$scope.sidebarIsVisible;
-	};
-	
-	// set refresh function which updates model data
-	$scope.refresh = function() {
-		$scope.newMember = {};
-		// update messages
+    
+    // handle side bar visibility
+    $scope.sidebarIsVisible = false;
+    $scope.showSideBar = function() {
+        $scope.sidebarIsVisible = !$scope.sidebarIsVisible;
+    };
+
+    // set refresh function which updates model data
+    $scope.refresh = function() {
+        $scope.newMember = {};
+        // update messages
         $scope.messages = Cultures.getMessages(CULTURE);
         // set side bar list options
         $scope.settingListOptions = [
-       		{ text: Cultures.getMessage("english", CULTURE), code: ENGLISH_CULTURE_CODE },
-       		{ text: Cultures.getMessage("french", CULTURE), code: FRENCH_CULTURE_CODE }
-       	];
-	};
+            { text: Cultures.getMessage("english", CULTURE), code: ENGLISH_CULTURE_CODE },
+            { text: Cultures.getMessage("french", CULTURE), code: FRENCH_CULTURE_CODE }
+        ];
+    };
     
-	// set function which changes the culture/locale
-	$scope.changeCulture = function(code) {
-		// update global culture variable
-		CULTURE = code;
-		// set culture
-		Cultures.setCulture(code);
-		// refresh
-		$scope.refresh();
-	};
+    // set function which changes the culture/locale
+    $scope.changeCulture = function(code) {
+        // update global culture variable
+        CULTURE = code;
+        // set culture
+        Cultures.setCulture(code);
+        // refresh
+        $scope.refresh();
+    };
     
     // Define a reset function
     $scope.reset = function() {
@@ -55,25 +55,25 @@ function MainCtrl($scope, Cultures, $http, Members) {
 
     // Define a register function
     $scope.register = function() {
-    	
-    	$scope.successMessages = '';
+    
+        $scope.successMessages = '';
         $scope.errorMessages = '';
         $scope.errors = {};
 
         Members.save($scope.newMember, function(data) {
-        	
-        	// Clear the form
+        
+            // Clear the form
             $scope.reset();
-        	// mark success on the registration form
+            // mark success on the registration form
             $scope.successMessages = [ 'Member Registered' ];
         }, function(result) {
             if ((result.status == 409) || (result.status == 400)) {
-            	$scope.errors = result.data;
+                $scope.errors = result.data;
             } else {
-            	$scope.errorMessages = [ 'Unknown  server error' ];
+                $scope.errorMessages = [ 'Unknown  server error' ];
             }
             if(!$scope.$$phase) {
-            	$scope.$apply();
+                $scope.$apply();
             }
         });
     };

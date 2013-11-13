@@ -15,181 +15,181 @@
  * limitations under the License.
  */
 html,body {
-	height: 100%;
-	font-family: Verdana, sans-serif;
-	color: #FFFFFF;
+    height: 100%;
+    font-family: Verdana, sans-serif;
+    color: #FFFFFF;
 }
 
 p {
-	margin-left: 8px;
-	margin-right: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 a {
-	color: #369;
-	text-decoration: none;
+    color: #369;
+    text-decoration: none;
 }
 
 .mobileicon {
-	float: right;
-	padding: 0 10px 0 10px;
+    float: right;
+    padding: 0 10px 0 10px;
 }
 
 .member-form {
-	padding: 10px 10px 0 10px;
+    padding: 10px 10px 0 10px;
 }
 
 #container {
-	width: 100%;
-	height: 100%;
-	/* Added in order to clip the edges of the container if the content overflows the area */
-	/*  workaround for removing horizontal scroll bar when the slide bar is visible */
-	overflow-x: hidden;
-	background: inherit;
-	position: relative;
+    width: 100%;
+    height: 100%;
+    /* Added in order to clip the edges of the container if the content overflows the area */
+    /*  workaround for removing horizontal scroll bar when the slide bar is visible */
+    overflow-x: hidden;
+    background: inherit;
+    position: relative;
 }
 
 #side-bar {
-	position: absolute;
-	width: 100%;
-	/* set stack order lower than the page content */
-	z-index: 1;
-	height: 100%;
-	left: 0;
+    position: absolute;
+    width: 100%;
+    /* set stack order lower than the page content */
+    z-index: 1;
+    height: 100%;
+    left: 0;
 }
 
 #page-content {
-	position: relative;
-	/* set stack order higher than the side bar */
-	z-index: 2;
-	/* inherit background from the parent element (so that side bar which is sibling is not shown in the background) */
-	background: inherit;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	/* transition: Internet Explorer 10, Firefox, Chrome, and Opera */
-	/* transition: <property> <duration> <timing-function> <delay> */
-	/* https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions */
-	transition: all 0.3s ease-in-out 0s;
-	/* Opera transition special support */
-	/* http://www.opera.com/docs/specs/presto24/css/transitions/ */
-	-o-transition: all 0.3s ease-in-out 0s;
-	/* -webkit-transition: Safari */
-	-webkit-transition: all 0.3s ease-in-out 0s;
+    position: relative;
+    /* set stack order higher than the side bar */
+    z-index: 2;
+    /* inherit background from the parent element (so that side bar which is sibling is not shown in the background) */
+    background: inherit;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transition: Internet Explorer 10, Firefox, Chrome, and Opera */
+    /* transition: <property> <duration> <timing-function> <delay> */
+    /* https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transitions */
+    transition: all 0.3s ease-in-out 0s;
+    /* Opera transition special support */
+    /* http://www.opera.com/docs/specs/presto24/css/transitions/ */
+    -o-transition: all 0.3s ease-in-out 0s;
+    /* -webkit-transition: Safari */
+    -webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 #page-content.slide {
-	/* transform: Internet Explorer 10, Firefox) */
-	transform: translateX(240px);
-	/* Opera only supports 2D */
-	-o-transform: translateX(240px);
-	/* -webkit-transform: Safari and Chrome */
-	-webkit-transform: translateX(240px);
+    /* transform: Internet Explorer 10, Firefox) */
+    transform: translateX(240px);
+    /* Opera only supports 2D */
+    -o-transform: translateX(240px);
+    /* -webkit-transform: Safari and Chrome */
+    -webkit-transform: translateX(240px);
 }
 
 .footer {
-	bottom: 0;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 form fieldset {
-	border: none;
+    border: none;
 }
 
 .display-inline {
-	display: inline;
+    display: inline;
 }
 
 .form-error {
-	padding: 0 10px;
-	color: #FF0000;
-	font-family: Tahoma, Arial, Helvetica, Verdana, sans-serif;
-	font-size: 8pt;
-	font-style: italic;
-	padding: 0 10px;
+    padding: 0 10px;
+    color: #FF0000;
+    font-family: Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 8pt;
+    font-style: italic;
+    padding: 0 10px;
 }
 
 .form-success {
-	padding: 0 10px;
-	color: #33FF33;
-	font-family: Tahoma, Arial, Helvetica, Verdana, sans-serif;
-	font-size: 8pt;
-	font-style: italic;
-	padding: 0 10px;
+    padding: 0 10px;
+    color: #33FF33;
+    font-family: Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 8pt;
+    font-style: italic;
+    padding: 0 10px;
 }
 
 .main {
-	background: inherit;
-	height: 100%;
-	overflow: auto;
+    background: inherit;
+    height: 100%;
+    overflow: auto;
 }
 
 .members-container {
-	background: inherit;
-	height: 100%;
+    background: inherit;
+    height: 100%;
 }
 
 /* Custom Topcoat styles begin */
 .topcoat-icon--home {
-	background: url("../libs/topcoat/img/home.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/home.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-icon--plus {
-	background: url("../libs/topcoat/img/plus.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/plus.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-icon--settings {
-	background: url("../libs/topcoat/img/settings.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/settings.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-icon--user {
-	background: url("../libs/topcoat/img/user.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/user.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-icon--call {
-	background: url("../libs/topcoat/img/call.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/call.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-icon--email {
-	background: url("../libs/topcoat/img/email.svg") no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
+    background: url("../libs/topcoat/img/email.svg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .topcoat-member-container p {
-	display: inline-block;
+    display: inline-block;
 }
 
 .topcoat-list__container {
-	border-bottom: none;
+    border-bottom: none;
 }
 
 /* This style class is the same as the is-active style included in the Topcoat CSS file (topcoat-mobile-dark.css) */
 .topcoat-list-clickable li:active {
-	background-color: #404141;
-	-webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
-	box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
+    background-color: #404141;
+    -webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.18);
 }
 
 .topcoat-text-input {
-	margin-left: 0;
+    margin-left: 0;
 }
 /* Custom Topcoat styles end */

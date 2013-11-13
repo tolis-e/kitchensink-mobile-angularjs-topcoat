@@ -20,16 +20,16 @@ angular.module('membersService', ['ngResource']).
 });
 
 angular.module('culturesService', []).factory('Cultures', function() {
-	return {
-		getMessage: function(key, culture) {
-			return Globalize.localize(key, culture);
-		},
-		getMessages: function(culture) {
-			return Globalize.getLocalizedMessages(culture);
-		},
-		setCulture: function(culture) {
-			Globalize.culture(culture);
-			return;
-		}
-	};
+    return {
+        getMessage: function(key, culture) {
+            return Globalize.localize(key, culture);
+        },
+        getMessages: function(culture) {
+            return Globalize.getLocalizedMessages(culture);
+        },
+        setCulture: function(culture) {
+            Globalize.culture(culture);
+            return;
+        }
+    };
 });

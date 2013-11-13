@@ -14,25 +14,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var ENGLISH_CULTURE_CODE = "en";
-var FRENCH_CULTURE_CODE = "fr";
-
-// set initial culture
-var CULTURE = ENGLISH_CULTURE_CODE;
+var ENGLISH_CULTURE_CODE = "en",
+    FRENCH_CULTURE_CODE = "fr",
+    CULTURE = ENGLISH_CULTURE_CODE;
 
 // set default globalize culture
 Globalize.culture(CULTURE);
 
 // extend Globalize
-Globalize.getLocalizedMessages = function( cultureSelector ) {
-	return this.findClosestCulture( cultureSelector ).messages ||
-		this.cultures[ "default" ].messages;
+Globalize.getLocalizedMessages = function (cultureSelector) {
+    return this.findClosestCulture(cultureSelector).messages || this.cultures["default"].messages;
 };
 
 // add messages for English culture
 Globalize.addCultureInfo( ENGLISH_CULTURE_CODE, {
     messages: {
-    	"home_msg_0": "Kitchensink",
+        "home_msg_0": "Kitchensink",
         "home_msg_1": "You have successfully deployed a Java EE 6 web application.",
         "home_msg_2": "This Quickstart demonstrates the use of various Mobile, HTML5, CSS3 and JavaScript techniques.",
         "home_msg_3": "AngularJS",
@@ -53,7 +50,7 @@ Globalize.addCultureInfo( ENGLISH_CULTURE_CODE, {
 // add messages for French culture
 Globalize.addCultureInfo( FRENCH_CULTURE_CODE, {
     messages: {
-    	"home_msg_0": "Kitchensink",
+        "home_msg_0": "Kitchensink",
         "home_msg_1": "Vous avez réussi à déployer une Java EE 6 web application.",
         "home_msg_2": "Ce tutoriel montre comment utiliser divers Mobile, HTML5, CSS3 et JavaScript techniques.",
         "home_msg_3": "AngularJS",
@@ -73,20 +70,20 @@ Globalize.addCultureInfo( FRENCH_CULTURE_CODE, {
 
 // set routes
 angular.module('kitchensink', ['membersService', 'culturesService']).config(
-	[ '$routeProvider', function($routeProvider) {
-	    $routeProvider.
-	    // if URL fragment is /home, then load the home partial, with the
-	    // MembersCtrl controller
-	    when('/home', {
-	        templateUrl : 'partials/home.html'
-	    // Add a default route
-	    }).when('/member', {
-	    	templateUrl : 'partials/member.html'
-    	    // Add a default route
-	    }).when('/members', {
-	    	templateUrl : 'partials/members.html'
-    	    // Add a default route
-	    }).otherwise({
-	        redirectTo : '/home'
-	    });
+    [ '$routeProvider', function($routeProvider) {
+        $routeProvider.
+        // if URL fragment is /home, then load the home partial, with the
+        // MembersCtrl controller
+        when('/home', {
+            templateUrl : 'partials/home.html'
+        // Add a default route
+        }).when('/member', {
+            templateUrl : 'partials/member.html'
+        // Add a default route
+        }).when('/members', {
+            templateUrl : 'partials/members.html'
+        // Add a default route
+        }).otherwise({
+            redirectTo : '/home'
+        });
 }]);
