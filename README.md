@@ -22,9 +22,9 @@ The build execution is done through Maven. Navigate to the project's root folder
 
     mvn clean package
 
-## Execute the [QUnit Test Suite](https://github.com/tolis-e/kitchensink-mobile-angularjs-topcoat/blob/master/src/test/resources/qunit-assets/qunit-tests.html) using [arquillian-extension-qunit](https://github.com/arquillian/arquillian-extension-qunit)
+## Execute the Arquillian QUnit tests
 
-The QUnit Test Suite execution is done through Maven. Navigate to the project's root folder and execute:
+The [QUnit Test Suite](https://github.com/tolis-e/kitchensink-mobile-angularjs-topcoat/blob/master/src/test/resources/qunit-assets/qunit-tests.html) execution is done through Maven. Navigate to the project's root folder and execute:
 
     mvn test -Parq-qunit-tests
 
