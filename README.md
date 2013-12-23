@@ -28,4 +28,9 @@ The [QUnit Test Suite](https://github.com/tolis-e/kitchensink-mobile-angularjs-t
 
     mvn test -Parq-qunit-tests
 
+Note that [arquillian-extension-qunit](https://github.com/arquillian/arquillian-extension-qunit.git) artifact 1.0.0.Alpha3-SNAPSHOT is required in order to execute the [test class](https://github.com/tolis-e/kitchensink-mobile-angularjs-topcoat/blob/master/src/test/java/org/jboss/as/quickstarts/kitchensink/test/QUnitShowcaseTest.java). You can install the artifact to your local Maven repository by executing:
+
+    git clone https://github.com/arquillian/arquillian-extension-qunit.git
+    mvn install -f arquillian-extension-qunit/pom.xml
+
 By default, the QUnit Test Suite is executed using Mozilla Firefox browser. You can use your favorite browser by modifying the _browser_ property inside [arquillian.xml](https://github.com/tolis-e/kitchensink-mobile-angularjs-topcoat/blob/master/src/test/resources/arquillian.xml).
