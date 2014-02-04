@@ -14,7 +14,7 @@ All you need to build this project is Java 6.0 (Java SDK 1.6) or better, Maven 3
 
 The application this project produces is designed to be run on JBoss Enterprise Application Platform 6 or JBoss AS 7. 
 
-The application is running on Openshift [here](https://kitchensinkangularjstopcoat-aemmanou.rhcloud.com/#/home)
+The application is running on Openshift [here](https://kitchensinkangularjstopcoat-rhqa.rhcloud.com/#/home)
 
 ## Build
 
