@@ -43,12 +43,12 @@
         <version.compiler.plugin>2.3.1</version.compiler.plugin>
         <version.surefire.plugin>2.16</version.surefire.plugin>
         <version.war.plugin>2.1.1</version.war.plugin>
-        <maven.compiler.target>1.6</maven.compiler.target>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <version.org.jboss.arquillian.graphene>2.0.0.CR1</version.org.jboss.arquillian.graphene>
-        <version.org.jboss.arquillian>1.1.1.Final</version.org.jboss.arquillian>
-        <version.org.jboss.arquillian.drone>1.2.0.Final</version.org.jboss.arquillian.drone>
-        <version.org.jboss.arquillian.qunit>1.0.0.Alpha3-SNAPSHOT</version.org.jboss.arquillian.qunit>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <version.org.jboss.arquillian.graphene>2.0.3.Final</version.org.jboss.arquillian.graphene>
+        <version.org.jboss.arquillian>1.1.5.Final</version.org.jboss.arquillian>
+        <version.org.jboss.arquillian.drone>2.0.0.Alpha2</version.org.jboss.arquillian.drone>
+        <version.org.jboss.arquillian.qunit>1.0.0.Alpha3</version.org.jboss.arquillian.qunit>
         <version.junit>4.11</version.junit>
     </properties>
 
